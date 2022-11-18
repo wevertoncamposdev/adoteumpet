@@ -24,7 +24,7 @@ class UserService
     {
         try {
             
-            $data = DB::table('users')->select('uuid','name', 'email')->get();
+            $data = DB::table('users')->select('uuid','name', 'email', 'contact')->get();
             return $data;
 
         } catch (Exception $e) {

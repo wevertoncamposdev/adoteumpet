@@ -31,8 +31,9 @@ class DisclosureService
                     'image',
                     'about',
                     'disclosures.created_at',
-                    DB::raw('users.name as ong'),
-                    DB::raw('users.email as email')
+                    'users.uuid as ong_uuid',
+                    'users.name as ong',
+                    'users.email as email'
                 )
                 ->where('disclosures.deleted_at',"=",NULL)
                 ->get();
